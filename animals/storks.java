@@ -1,22 +1,26 @@
 package animals;
 
 import animals.base.birds;
-import ifaces.info;
 
-public class storks extends birds implements info {
+public class storks extends birds {
 
-    public storks(String name, int altitude) {
-        super(name, altitude);
+    public storks(String name, float height, float weight, String eyeColor, int altitude) {
+        super(name, height, weight, eyeColor, altitude);
     }
 
     @Override
     public String getInfo() {
-        return this.toString();
+        return super.getInfo();
     }
 
     @Override
     public String toFly() {
         return super.toFly();
+    }
+
+    @Override
+    public String doSound() {
+        return String.format("Каррррр...");
     }
     
 }

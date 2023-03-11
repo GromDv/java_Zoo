@@ -4,24 +4,24 @@ import ifaces.fawn;
 
 public abstract class pets extends animal implements fawn {
 
-    public pets(float height, float weight, String eyeColor, String name, String type, boolean vaccined, String color, String birthDay) {
-        super(height, weight, eyeColor);
-        this.name = name;
+    public pets(float height, float weight, String eyeColor, String name, String type, boolean vaccined, String color, String birthDay, String nickname) {
+        super(name, height, weight, eyeColor);
+        this.nickname = nickname;
         this.type = type;
         this.vaccined = vaccined;
         this.color = color;
         this.birthDay = birthDay;
     }
 
-    protected String name;
+    protected String nickname;
     protected String type;
     protected boolean vaccined;
     protected String color;
     protected String birthDay;
 
     @Override
-    public String toString() {
-        return String.format("Зовут: %s(%s),%s(глаза-%s) Выс:%.2fм Вес:%.1fкг др:%s. Прив:%s", name, type, color, super.getEyeColor(), super.getHeight(), super.getWeight(), birthDay, vaccined ? "Yes" : "No");
+    public String getInfo() {
+        return String.format("Название: %s; Зовут: %s(%s),%s %s др:%s. Прив:%s", name, nickname, type, color, super.getInfo(), birthDay, vaccined ? "Да" : "Нет");
     };
 
     public String getName() {

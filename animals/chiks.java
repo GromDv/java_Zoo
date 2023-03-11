@@ -6,13 +6,13 @@ import ifaces.sounds;
 
 public class chiks extends birds implements info, sounds {
 
-    public chiks(String name, int altitude) {
-        super(name, altitude);
+    public chiks(String name, float height, float weight, String eyeColor, int altitude) {
+        super(name, height, weight, eyeColor, altitude);
     }
 
     @Override
     public String getInfo() {
-        return this.toString();
+        return super.getInfo();
     }
 
     @Override

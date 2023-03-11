@@ -1,25 +1,15 @@
 package animals.base;
 
 import ifaces.fly;
-import ifaces.info;
 
-public abstract class birds implements fly, info {
+public abstract class birds extends animal implements fly {
+
+    public birds(String name, float height, float weight, String eyeColor, int altitude) {
+        super(name, height, weight, eyeColor);
+        this.altitude = altitude;
+    }
 
     protected int altitude;
-    private String name;
-
-    protected birds(String name, int altitude) {
-        this.altitude = altitude;
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toFly() {
@@ -27,7 +17,7 @@ public abstract class birds implements fly, info {
     }
 
     @Override
-    public String toString() {
-        return String.format("Название %s, высота полета: %dм", name, altitude);
+    public String getInfo() {
+        return String.format("Название %s, высота полета: %dм, %s", name, altitude, super.getInfo());
     }
 }

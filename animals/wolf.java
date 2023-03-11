@@ -18,7 +18,7 @@ public class wolf extends wild {
 
     @Override
     public String getInfo() {
-        return String.format("%s вожак:%s", super.toString(), leader ? "Yes" : "No");
+        return String.format("%s вожак:%s", super.getInfo(), leader ? "Да" : "Нет");
     }
     
 }

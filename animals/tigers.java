@@ -15,7 +15,7 @@ public tigers(float height, float weight, String eyeColor, String name, String a
 
     @Override
     public String getInfo() {
-        return this.toString();
+        return super.getInfo();
     }
     
 }

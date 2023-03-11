@@ -8,8 +8,8 @@ public class dogs extends pets implements train {
     private boolean isTrained;
 
     public dogs(float height, float weight, String eyeColor, String name, String type, boolean vaccined, String color,
-            String birthDay, boolean isTrained) {
-        super(height, weight, eyeColor, name, type, vaccined, color, birthDay);
+            String birthDay, String nickname, boolean isTrained) {
+        super(height, weight, eyeColor, name, type, vaccined, color, birthDay, nickname);
         this.isTrained = isTrained;
     }
 
@@ -25,12 +25,12 @@ public class dogs extends pets implements train {
 
     @Override
     public String getInfo() {
-        return String.format("%s Дресс:%s", super.toString(), isTrained ? "Yes" : "No");
+        return String.format("%s Дресс:%s", super.getInfo(), isTrained ? "Да" : "Нет");
     }
 
     @Override
     public String toTrain() {
-        return String.format("Дрессировка идет.");
+        return String.format("Дрессируется");
     }
     
 }

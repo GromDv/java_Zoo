@@ -4,8 +4,9 @@ import animals.base.pets;
 
 public class cats extends pets {
 
-    public cats(float height, float weight, String eyeColor, String name, String type, boolean vaccined, String color, String birthDay) {
-        super(height, weight, eyeColor, name, type, vaccined, color, birthDay);
+    public cats(float height, float weight, String eyeColor, String name, String type, boolean vaccined, String color,
+            String birthDay, String nickname) {
+        super(height, weight, eyeColor, name, type, vaccined, color, birthDay, nickname);
     }
 
     @Override
@@ -20,6 +21,6 @@ public class cats extends pets {
 
     @Override
     public String getInfo() {
-        return this.toString();
+        return super.getInfo();
     }
 }

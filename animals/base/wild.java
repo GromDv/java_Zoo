@@ -2,27 +2,18 @@ package animals.base;
 
 public abstract class wild extends animal {
     public wild(float height, float weight, String eyeColor, String name, String areal, String foundDate) {
-        super(height, weight, eyeColor);
+        super(name, height, weight, eyeColor);
         this.name = name;
         this.areal = areal;
         this.foundDate = foundDate;
     }
 
-    protected String name;
     protected String areal;
     protected String foundDate;
 
     @Override
-    public String toString() {
-        return String.format("Название: %s, найден: %s(%s), Выс:%.2fм Вес:%.1fкг Глаза-%s", name, foundDate, areal, super.getHeight(), super.getWeight(), super.getEyeColor());
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getInfo() {
+        return String.format("Название: %s, найден: %s(%s), %s", name, foundDate, areal, super.getInfo());
     }
 
     public String getAreal() {
